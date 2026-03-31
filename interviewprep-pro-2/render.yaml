@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: interview-navigator-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ALLOW_LIVE_SCRAPE
+        value: "false"
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: NODE_VERSION
+        value: "22"
